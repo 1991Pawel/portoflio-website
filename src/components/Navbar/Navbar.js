@@ -10,10 +10,6 @@ const Navbar = () => {
   return (
     <NavbarWrapper>
       <NavbarItem />
-      <NavbarItem />
-      <NavbarItem />
-      <NavbarItem />
-      <NavbarItem />
     </NavbarWrapper>
   );
 };

@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
-  /* @import url('https://fonts.googleapis.com/css?family=Baloo+2:700|Lato:300,400&display=swap'); */
-  
+const GlobalStyle = createGlobalStyle`  
   *, *::before, *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;

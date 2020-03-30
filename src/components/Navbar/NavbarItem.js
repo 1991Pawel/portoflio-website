@@ -6,17 +6,31 @@ const NavbarItemWrapper = styled.li`
   list-style: none;
 `;
 
+const NavbarListWrapper = styled.ul`
+  display: flex;
+  justify-content: center;
+`;
+
 const StyledLink = styled(NavLink)`
+  font-size: ${({ theme }) => theme.fontSize.sm};
+  padding: 1rem;
   color: palevioletred;
-  display: block;
-  margin: 0.5em 0;
+  display: inline-block;
   text-decoration: none;
+  text-transform: capitalize;
+  color: ${({ theme }) => theme.dark};
 
   &:hover {
     text-decoration: underline;
   }
   &.active {
-    color: red;
+    color: ${({ theme }) => theme.primary};
+  }
+  @media (min-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.m};
+  }
+  @media (min-width: 968px) {
+    font-size: ${({ theme }) => theme.fontSize.l};
   }
 `;
 
@@ -35,8 +49,7 @@ const NavbarItem = () => {
       </StyledLink>
     </NavbarItemWrapper>
   ));
-
-  return <>{menu}</>;
+  return <NavbarListWrapper>{menu}</NavbarListWrapper>;
 };
 
 export default NavbarItem;

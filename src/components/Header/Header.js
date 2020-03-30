@@ -1,15 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar/Navbar';
+import Logo from './Logo';
 
 const HeaderWrapper = styled.header`
-  background: #ccc;
+  padding: 1rem 0;
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 const Header = () => {
   return (
     <HeaderWrapper>
-      <p>logo</p>
+      <Logo />
       <Navbar />
     </HeaderWrapper>
   );

@@ -91,6 +91,9 @@ const StyledLink = styled(Link)`
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.primary};
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const HomePageTemplate = () => {

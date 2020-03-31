@@ -1,9 +1,11 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { HomePageSvg } from '../components/Svg/Svg';
 import Heading from '../components/Heading/Heading';
 import SubHeading from '../components/Heading/SubHeading';
+import { Transition, Variants } from '../animation/Transition';
 
 const rotation = keyframes`
     0% {
@@ -98,18 +100,20 @@ const StyledLink = styled(Link)`
 
 const HomePageTemplate = () => {
   return (
-    <HomePageTemplateWrapper>
-      <HeadingContentWrapper>
-        <SubHeading>i am learning to become</SubHeading>
-        <Heading>Front-end-developer.</Heading>
-        <ButtonHeadingWrapper>
-          <StyledLink to="Project">Projects</StyledLink>
-        </ButtonHeadingWrapper>
-      </HeadingContentWrapper>
-      <ImageWrapper>
-        <HomePageSvg alt="image with desktop" />
-      </ImageWrapper>
-    </HomePageTemplateWrapper>
+    <motion.div initial="out" animate="in" exit="out" variants={Variants} transition={Transition}>
+      <HomePageTemplateWrapper>
+        <HeadingContentWrapper>
+          <SubHeading>i am learning to become</SubHeading>
+          <Heading>Front-end-developer.</Heading>
+          <ButtonHeadingWrapper>
+            <StyledLink to="Project">Projects</StyledLink>
+          </ButtonHeadingWrapper>
+        </HeadingContentWrapper>
+        <ImageWrapper>
+          <HomePageSvg alt="image with desktop" />
+        </ImageWrapper>
+      </HomePageTemplateWrapper>
+    </motion.div>
   );
 };
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { SkillsPageSvg } from '../components/Svg/Svg';
 import Heading from '../components/Heading/Heading';
 import Subheading from '../components/Heading/SubHeading';
 import SectionHeading from '../components/Heading/SectionHeading';
+import { Transition, Variants } from '../animation/Transition';
 
 const SkillsPageTemplateWrapper = styled.section`
   display: flex;
@@ -81,78 +83,80 @@ const Container = styled.div`
 `;
 
 const SkillsPageTemplate = () => (
-  <SkillsPageTemplateWrapper>
-    <ImageWrapper>{SkillsPageSvg}</ImageWrapper>
-    <Container>
-      <ContentWrapper>
-        <Subheading>Development</Subheading>
-        <Heading>Skills</Heading>
-        <ListWrapper>
-          <ListItem>
-            <SectionHeading>Html</SectionHeading>
-          </ListItem>
+  <motion.div initial="out" animate="in" exit="out" variants={Variants} transition={Transition}>
+    <SkillsPageTemplateWrapper>
+      <ImageWrapper>{SkillsPageSvg}</ImageWrapper>
+      <Container>
+        <ContentWrapper>
+          <Subheading>Development</Subheading>
+          <Heading>Skills</Heading>
           <ListWrapper>
             <ListItem>
-              <ListPoint>Semantic HTML5</ListPoint>
+              <SectionHeading>Html</SectionHeading>
             </ListItem>
+            <ListWrapper>
+              <ListItem>
+                <ListPoint>Semantic HTML5</ListPoint>
+              </ListItem>
+            </ListWrapper>
           </ListWrapper>
-        </ListWrapper>
-        <ListWrapper>
-          <ListItem>
-            <SectionHeading>Css</SectionHeading>
-          </ListItem>
           <ListWrapper>
             <ListItem>
-              <ListPoint>Flexbox CSS-grid SASS</ListPoint>
+              <SectionHeading>Css</SectionHeading>
             </ListItem>
+            <ListWrapper>
+              <ListItem>
+                <ListPoint>Flexbox CSS-grid SASS</ListPoint>
+              </ListItem>
+            </ListWrapper>
           </ListWrapper>
-        </ListWrapper>
-        <ListWrapper>
-          <ListItem>
-            <SectionHeading>Js</SectionHeading>
-          </ListItem>
           <ListWrapper>
             <ListItem>
-              <ListPoint>ES6+ features DOM manipulations</ListPoint>
+              <SectionHeading>Js</SectionHeading>
             </ListItem>
-            <ListItem>
-              <ListPoint>Local storage API</ListPoint>
-            </ListItem>
+            <ListWrapper>
+              <ListItem>
+                <ListPoint>ES6+ features DOM manipulations</ListPoint>
+              </ListItem>
+              <ListItem>
+                <ListPoint>Local storage API</ListPoint>
+              </ListItem>
+            </ListWrapper>
           </ListWrapper>
-        </ListWrapper>
-      </ContentWrapper>
-      <ContentWrapper>
-        <Subheading>Familiar with</Subheading>
-        <Heading>Basic</Heading>
-        <ListWrapper>
-          <ListItem>
-            <SectionHeading>Git</SectionHeading>
-          </ListItem>
+        </ContentWrapper>
+        <ContentWrapper>
+          <Subheading>Familiar with</Subheading>
+          <Heading>Basic</Heading>
           <ListWrapper>
             <ListItem>
-              <ListPoint>GitHub</ListPoint>
+              <SectionHeading>Git</SectionHeading>
             </ListItem>
+            <ListWrapper>
+              <ListItem>
+                <ListPoint>GitHub</ListPoint>
+              </ListItem>
+            </ListWrapper>
           </ListWrapper>
-        </ListWrapper>
-        <ListWrapper>
-          <ListItem>
-            <SectionHeading>React</SectionHeading>
-          </ListItem>
           <ListWrapper>
             <ListItem>
-              <ListPoint>Context State</ListPoint>
+              <SectionHeading>React</SectionHeading>
             </ListItem>
-            <ListItem>
-              <ListPoint>Css in JS</ListPoint>
-            </ListItem>
-            <ListItem>
-              <ListPoint>Redux</ListPoint>
-            </ListItem>
+            <ListWrapper>
+              <ListItem>
+                <ListPoint>Context State</ListPoint>
+              </ListItem>
+              <ListItem>
+                <ListPoint>Css in JS</ListPoint>
+              </ListItem>
+              <ListItem>
+                <ListPoint>Redux</ListPoint>
+              </ListItem>
+            </ListWrapper>
           </ListWrapper>
-        </ListWrapper>
-      </ContentWrapper>
-    </Container>
-  </SkillsPageTemplateWrapper>
+        </ContentWrapper>
+      </Container>
+    </SkillsPageTemplateWrapper>
+  </motion.div>
 );
 
 export default SkillsPageTemplate;

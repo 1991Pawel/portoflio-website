@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import Heading from '../components/Heading/Heading';
 import Subheading from '../components/Heading/SubHeading';
 import Project from '../components/Project/Project';
+import { Transition, Variants } from '../animation/Transition';
 
 const ProjectPageTemplatWrapper = styled.section`
   margin-top: 5rem;
@@ -20,13 +22,15 @@ const HeadingWrapper = styled.div`
 `;
 
 const ProjectPageTemplate = () => (
-  <ProjectPageTemplatWrapper>
-    <HeadingWrapper>
-      <Subheading>recent project</Subheading>
-      <Heading>Project</Heading>
-    </HeadingWrapper>
-    <Project />
-  </ProjectPageTemplatWrapper>
+  <motion.div initial="out" animate="in" exit="out" variants={Variants} transition={Transition}>
+    <ProjectPageTemplatWrapper>
+      <HeadingWrapper>
+        <Subheading>recent project</Subheading>
+        <Heading>Project</Heading>
+      </HeadingWrapper>
+      <Project />
+    </ProjectPageTemplatWrapper>
+  </motion.div>
 );
 
 export default ProjectPageTemplate;

@@ -46,14 +46,9 @@ const GlobalStyle = createGlobalStyle`
   }
   @media (min-width: 1268px) {
       margin:0rem 20rem;
-      
-      
   }
   
   }
-
-  
-
 `;
 
 export default GlobalStyle;

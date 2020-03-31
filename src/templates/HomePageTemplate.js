@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
 import { HomePageSvg } from '../components/Svg/Svg';
 import Heading from '../components/Heading/Heading';
 import SubHeading from '../components/Heading/SubHeading';
-import Button from '../components/Button/Button';
 
 const rotation = keyframes`
     0% {
@@ -20,6 +20,7 @@ const rotation = keyframes`
   `;
 
 const HomePageTemplateWrapper = styled.section`
+  margin-top: 5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,6 +31,9 @@ const HomePageTemplateWrapper = styled.section`
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-around;
+  }
+  @media (min-width: 968px) {
+    margin-top: 10rem;
   }
 `;
 
@@ -78,6 +82,17 @@ const ButtonHeadingWrapper = styled.div`
   margin-top: 2rem;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 45px;
+  background: transparent;
+  color: ${({ theme }) => theme.dark};
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid ${({ theme }) => theme.primary};
+`;
+
 const HomePageTemplate = () => {
   return (
     <HomePageTemplateWrapper>
@@ -85,7 +100,7 @@ const HomePageTemplate = () => {
         <SubHeading>i am learning to become</SubHeading>
         <Heading>Front-end-developer.</Heading>
         <ButtonHeadingWrapper>
-          <Button>Projects</Button>
+          <StyledLink to="Project">Projects</StyledLink>
         </ButtonHeadingWrapper>
       </HeadingContentWrapper>
       <ImageWrapper>

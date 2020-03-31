@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledSubheading = styled.h3`
+  text-transform: capitalize;
   font-family: 'Baloo 2';
-  margin-bottom: -0.5rem;
+  margin-bottom: -1rem;
   font-size: ${({ theme }) => theme.fontSize.s};
   color: ${({ theme }) => theme.primary};
 

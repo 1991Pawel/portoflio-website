@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LiveIcon from '../../assets/desktop-icon.svg';
 import GitIcon from '../../assets/github.icon.svg';
+import StyledLink from '../StyledLink/StyledLink';
 
 const ProjectListWrapper = styled.ul`
   display: flex;
@@ -41,23 +42,6 @@ const ProjectTitle = styled.h4`
 const LinkWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-`;
-
-const StyledLink = styled.a`
-  color: ${({ theme }) => theme.dark};
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
-  img {
-    margin-left: 1rem;
-    height: 20px;
-    width: 20px;
-  }
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const DescriptionWrapper = styled.div`

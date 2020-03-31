@@ -5,7 +5,10 @@ import Subheading from '../components/Heading/SubHeading';
 import Project from '../components/Project/Project';
 
 const ProjectPageTemplatWrapper = styled.section`
-  margin-top: 10rem;
+  margin-top: 5rem;
+  @media (min-width: 968px) {
+    margin-top: 10rem;
+  }
 `;
 
 const HeadingWrapper = styled.div`

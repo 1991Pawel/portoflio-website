@@ -9,6 +9,7 @@ const SkillsPageTemplateWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5rem;
   @media (min-width: 968px) {
     margin-top: 10rem;
     flex-direction: row;

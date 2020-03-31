@@ -42,7 +42,12 @@ const GlobalStyle = createGlobalStyle`
       padding:2rem 0;
   }
   @media (min-width: 1068px) {
+      margin:0rem 15rem;
+  }
+  @media (min-width: 1268px) {
       margin:0rem 20rem;
+      
+      
   }
   
   }

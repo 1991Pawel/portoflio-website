@@ -2,17 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import Heading from '../components/Heading/Heading';
 import Subheading from '../components/Heading/SubHeading';
+import Project from '../components/Project/Project';
 
 const ProjectPageTemplatWrapper = styled.section`
-  border: 5px solid red;
+  margin-top: 10rem;
 `;
 
 const HeadingWrapper = styled.div`
-  border: 5px solid red;
-`;
+  text-align: center;
 
-const ProjectListWrapper = styled.ul`
-  border: 5px solid red;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const ProjectPageTemplate = () => (
@@ -21,7 +22,7 @@ const ProjectPageTemplate = () => (
       <Subheading>recent project</Subheading>
       <Heading>Project</Heading>
     </HeadingWrapper>
-    <ProjectListWrapper>Project</ProjectListWrapper>
+    <Project />
   </ProjectPageTemplatWrapper>
 );
 

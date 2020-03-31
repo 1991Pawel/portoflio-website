@@ -5,6 +5,7 @@ export const HomePageSvg = () => (
   <svg
     id="homePageSvg"
     xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
     width="1071.194"
     height="855"
     viewBox="0 0 1071.194 855"
@@ -362,7 +363,13 @@ export const HomePageSvg = () => (
 );
 
 export const SkillsPageSvg = (
-  <svg xmlns="http://www.w3.org/2000/svg" width="479" height="277" viewBox="0 0 479 277">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+    width="479"
+    height="277"
+    viewBox="0 0 479 277"
+  >
     <g
       id="undraw_web_development_w2vv_1_"
       data-name="undraw_web_development_w2vv (1)"

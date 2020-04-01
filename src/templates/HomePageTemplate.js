@@ -106,7 +106,7 @@ const HomePageTemplate = () => {
           <SubHeading>i am a</SubHeading>
           <Heading>Front-End-Developer.</Heading>
           <ButtonHeadingWrapper>
-            <StyledLink to="Project">Projects</StyledLink>
+            <StyledLink to="Projects">Projects</StyledLink>
           </ButtonHeadingWrapper>
         </HeadingContentWrapper>
         <ImageWrapper>

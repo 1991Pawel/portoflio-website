@@ -103,8 +103,8 @@ const HomePageTemplate = () => {
     <motion.div initial="out" animate="in" exit="out" variants={Variants} transition={Transition}>
       <HomePageTemplateWrapper>
         <HeadingContentWrapper>
-          <SubHeading>i am learning to become</SubHeading>
-          <Heading>Front-end-developer.</Heading>
+          <SubHeading>i am a</SubHeading>
+          <Heading>Front-End-Developer.</Heading>
           <ButtonHeadingWrapper>
             <StyledLink to="Project">Projects</StyledLink>
           </ButtonHeadingWrapper>

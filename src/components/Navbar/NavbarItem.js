@@ -37,7 +37,7 @@ const StyledLink = styled(NavLink)`
 const listLink = [
   { name: 'start', path: '/', exact: true },
   { name: 'skills', path: '/skills' },
-  { name: 'project', path: '/project' },
+  { name: 'projects', path: '/projects' },
   { name: 'contact', path: '/contact' },
 ];
 

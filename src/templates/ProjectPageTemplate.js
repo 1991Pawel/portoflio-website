@@ -25,8 +25,8 @@ const ProjectPageTemplate = () => (
   <motion.div initial="out" animate="in" exit="out" variants={Variants} transition={Transition}>
     <ProjectPageTemplatWrapper>
       <HeadingWrapper>
-        <Subheading>recent project</Subheading>
-        <Heading>Project</Heading>
+        <Subheading>recent projects</Subheading>
+        <Heading>Projects</Heading>
       </HeadingWrapper>
       <Project />
     </ProjectPageTemplatWrapper>

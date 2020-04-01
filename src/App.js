@@ -20,7 +20,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={HomePageTemplate} />
             <Route exact path="/skills" component={SkillsPageTemplate} />
-            <Route exact path="/project" component={ProjectPageTemplate} />
+            <Route exact path="/projects" component={ProjectPageTemplate} />
             <Route exact path="/contact" component={ContactPageTemplate} />
           </Switch>
         </AnimatePresence>
